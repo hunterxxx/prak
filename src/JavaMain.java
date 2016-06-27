@@ -1,4 +1,4 @@
-public class Main {
+public class JavaMain {
 
     static Controller controller;
 
