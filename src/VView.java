@@ -15,7 +15,7 @@ public class VView extends JFrame{
 	private JButton calc = new JButton("Berechnen");
 	
 	public VView(){
-		
+		super("Hello");
         initForm();
 	}
 
@@ -34,7 +34,7 @@ public class VView extends JFrame{
 		
 	}
 	
-	public String getEingabe(){
+	public int[] getEingabe(){
 		
 		
 		return this.x1.getText();

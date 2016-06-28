@@ -46,13 +46,13 @@ public class Model {
 		this.angler=Math.atan(abstand(mid,re)/abstand(anf,mid));
 		this.llength=abstand(mid,li)/abstand(mid,anf);
 		this.rlength=abstand(mid,re)/abstand(mid,anf);
-		//view.drawaline(anf,mid);
+		view.drawaline(anf,mid);
 		paint(anf,mid,li,re);
 	}
 	
 	public void paint(Punkt a, Punkt m,Punkt l,Punkt r){
-		//view.drawaline(m,l);
-		//view.drawaline(m,r);
+		view.drawaline(m,l);
+		view.drawaline(m,r);
 		Punkt p1=newPunkt(m,l,true);
 		Punkt p2=newPunkt(m,l,false);
 		Punkt p3=newPunkt(m,r,true);

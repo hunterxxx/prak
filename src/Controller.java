@@ -16,16 +16,17 @@ public class Controller implements ActionListener{
 	}
 	
 	public void start(){
-		
+		//
 	}
 	
 	public void showView(){
-		
+		this._view.setVisible(true);
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		long wert = Long.valueOf(_view.getEingabe());
-		
+		int [] wert = int.(_view.getEingabe());
+		_model.Model(wert);
+		_view.drawaline(String.valueOf(_model.get));
 		
 	}
 	
