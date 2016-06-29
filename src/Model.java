@@ -3,7 +3,7 @@ import static java.lang.Math.*;
 import javax.swing.text.View;
 
 public class Model {
-	private View view;
+	private VView view;
 	private double anglel;
 	private double angler;
 	private double llength;
@@ -11,7 +11,7 @@ public class Model {
 	private int height;
 	private int width;
 	
-	public Model(View vw,Punkt anf,Punkt mid,Punkt li,Punkt re,int hoehe,int breite){
+	public Model(VView vw,Punkt anf,Punkt mid,Punkt li,Punkt re,int hoehe,int breite){
 		this.height=hoehe;
 		this.width=breite;
 		this.view=vw;
@@ -46,13 +46,13 @@ public class Model {
 		this.angler=Math.atan(abstand(mid,re)/abstand(anf,mid));
 		this.llength=abstand(mid,li)/abstand(mid,anf);
 		this.rlength=abstand(mid,re)/abstand(mid,anf);
-		//view.drawaline(anf,mid);
+		view.drawaline(anf,mid);
 		paint(anf,mid,li,re);
 	}
 	
 	public void paint(Punkt a, Punkt m,Punkt l,Punkt r){
-		//view.drawaline(m,l);
-		//view.drawaline(m,r);
+		view.drawaline(m,l);
+		view.drawaline(m,r);
 		Punkt p1=newPunkt(m,l,true);
 		Punkt p2=newPunkt(m,l,false);
 		Punkt p3=newPunkt(m,r,true);

@@ -8,25 +8,29 @@ public class Controller implements ActionListener{
 	private VView _view;
 	
 	public Controller(){
-		//this._model = new Model (null, null, null, null, null, 0, 0);
-		this._view = new VView ();
-		
-		//addListener();
-		
-	}
-	
-	public void start(){
-		
+		VView vw = null;
+		Punkt anf = null;
+		Punkt mid = null;
+		Punkt li = null;
+		Punkt re = null;
+		int breite = 0;
+		int hoehe = 0;
+		this._model = new Model (vw,anf,mid, li,re,hoehe,breite);
+		this._view = new VView ();		
+		//addListener();		
 	}
 	
 	public void showView(){
-		
+		this._view.setVisible(true);
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		long wert = Long.valueOf(_view.getEingabe());
-		
-		
+		//int[] wert = array.valueOf(_view.getEingabe());
+		//_model(_view.getEingabe());
+        for(int i = 0; i< 6;i++)
+        {
+        	_model(_view.getEingabe());
+        }
 	}
 	
 }
