@@ -1,7 +1,12 @@
 import static java.lang.Math.*;
 
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.SwingUtilities;
+
 public class Model {
-	private VView view;
+	public final VView view;
 	private double anglel;
 	private double angler;
 	private double llength;
@@ -45,6 +50,11 @@ public class Model {
 		this.angler=Math.atan(abstand(mid,re)/abstand(anf,mid));
 		this.llength=abstand(mid,li)/abstand(mid,anf);
 		this.rlength=abstand(mid,re)/abstand(mid,anf);
+		
+		if(view == null){
+			
+			System.out.println("ERRROR null view");
+		}
 		view.drawaline(anf,mid);
 		paint(anf,mid,li,re);
 	}
@@ -62,6 +72,7 @@ public class Model {
 		if(possible(r,p3) && possible(r,p2)){
 			paint(m,r,p3,p4);
 		}
+		
 	}
 	
 	public double abstand(Punkt a,Punkt b){

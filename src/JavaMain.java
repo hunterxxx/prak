@@ -4,7 +4,6 @@ public class JavaMain {
 
     public static void main(String [] args){
         controller = new Controller();
-
         controller.showView();
     }
 }

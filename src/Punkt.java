@@ -1,8 +1,8 @@
 
 public class Punkt {
 
-		private int x;
-		private int y;
+		public int x;
+		public int y;
 	
 	public Punkt(int a,int b){
 		this.x=a;
