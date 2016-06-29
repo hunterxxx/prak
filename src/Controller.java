@@ -18,19 +18,23 @@ public class Controller implements ActionListener{
 		this._model = new Model (vw,anf,mid, li,re,hoehe,breite);
 		this._view = new VView ();		
 		//addListener();		
+
+		//this._model = new Model (null, null, null, null, null, 0, 0);
+		this._view = new VView ();
+		
+		//addListener();
+		
 	}
 	
+
 	public void showView(){
 		this._view.setVisible(true);
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		//int[] wert = array.valueOf(_view.getEingabe());
-		//_model(_view.getEingabe());
-        for(int i = 0; i< 6;i++)
-        {
-        	_model(_view.getEingabe());
-        }
+		int [] wert = int.(_view.getEingabe());
+		_model(wert);
+		_view.drawaline(String.valueOf(_model.get));		
 	}
 	
 }

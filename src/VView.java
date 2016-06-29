@@ -29,7 +29,7 @@ public class VView extends JFrame{
 	private JButton calc = new JButton("Berechnen");
 	
 	public VView(){
-		
+		super("Hello");
         initForm();
 	}
 
@@ -56,6 +56,7 @@ public class VView extends JFrame{
 		
 	}
 	
+<<<<<<< HEAD
 	public int[] getEingabe() {
 	    int[] intArray = new int[5];
 	    
@@ -67,6 +68,12 @@ public class VView extends JFrame{
 	    intArray[5] = Integer.parseInt(b.getText());
 	    
 	    return intArray;
+=======
+	public int[] getEingabe(){
+		
+		
+		return this.x1.getText();
+>>>>>>> de1c36c1a296ca0198fbdb9dc4bc7620bde43bf7
 	}
 	
 	public void drawaline(Punkt a, Punkt b){
