@@ -1,28 +1,25 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.text.View;
-
-public class Controller implements ActionListener{
+public class Controller{
 	private Model _model;
 	private VView _view;
 	
+	public int breite = 500;
+	public int hoehe = 500;
+	
 	public Controller(){
-		VView vw = null;
-		Punkt anf = null;
-		Punkt mid = null;
-		Punkt li = null;
-		Punkt re = null;
-		int breite = 0;
-		int hoehe = 0;
-		this._model = new Model (vw,anf,mid, li,re,hoehe,breite);
-		this._view = new VView ();		
-		//addListener();		
+		//VView vw = null;
+		
 
-		//this._model = new Model (null, null, null, null, null, 0, 0);
+		//this._model = new Model (vw,anf,mid, li,re,hoehe,breite);
+		
 		this._view = new VView ();
 		
-		//addListener();
+		addListener();
+	}
+	
+	public void start(){
 		
 	}
 	
@@ -31,10 +28,28 @@ public class Controller implements ActionListener{
 		this._view.setVisible(true);
 	}
 	
-	public void actionPerformed(ActionEvent e){
-		int [] wert = int.(_view.getEingabe());
-		_model(wert);
-		_view.drawaline(String.valueOf(_model.get));		
+	
+	public void passDateToModel(){
+		
+		
+		
+		
 	}
 	
+	  private void addListener(){
+	        this._view.setPointsListener(new PointsListener());
+
+	 }
+	  
+	  class PointsListener implements ActionListener{
+	        public void actionPerformed(ActionEvent e) {
+	            // TODO read and parse values
+	        	int [] wert = _view.getEingabe();
+	            
+	        	
+	            
+	            _model= new Model(_view,new Punkt(250,400),new Punkt(250,350),new Punkt(200,200), new Punkt(400,200),hoehe,breite);
+	        }
+	    }
+
 }

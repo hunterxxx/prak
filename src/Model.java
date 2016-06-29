@@ -1,7 +1,5 @@
 import static java.lang.Math.*;
 
-import javax.swing.text.View;
-
 public class Model {
 	private VView view;
 	private double anglel;
@@ -12,6 +10,7 @@ public class Model {
 	private int width;
 	
 	public Model(VView vw,Punkt anf,Punkt mid,Punkt li,Punkt re,int hoehe,int breite){
+		System.out.println("in model constructor");
 		this.height=hoehe;
 		this.width=breite;
 		this.view=vw;
